@@ -1,14 +1,16 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>點餐單</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>test LIFF</title>
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script>        //init LIFF
+    <script>
+        //init LIFF
         function initializeApp(data) {
             //取得QueryString
             let urlParams = new URLSearchParams(window.location.search);
@@ -43,7 +45,7 @@
                      text: '手機號碼 ' + $('#phone_number').val()
                      
                  },
-                 /**{
+                 {
                      type: 'text',
                      text: '用餐方式：' + $('input[name=dining]:checked').val()
                      
@@ -57,7 +59,7 @@
                      type: 'text',
                      text: '訂購餐點：' + $('input[name="meal"]:checked').val()
                      
-                 }**/
+                 }
                 ])
                .then(() => {
                    alert('done');
@@ -67,10 +69,8 @@
     </script>
 </head>
 <body>
-    <div class="row">
-        <div class="col-md-6" style="margin:5px">
-            <!-- https://getbootstrap.com/docs/4.0/components/forms/ -->
-            <form>
+        <div class="row">
+            <div class="col-md-6" style="margin:5px">
                 <div class="form-group">
                     <label>User ID</label>
                     <input class="form-control" type="text" id="userid">
@@ -123,8 +123,7 @@
                 </div>
                 <p>備註:需其他餐點請現場點單，謝謝。</p>
                 <button class="btn btn-primary" id="ButtonSendMsg">確定送單</button>
-            </form>
+            </div>
         </div>
-    </div>
 </body>
 </html>
